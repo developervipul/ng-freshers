@@ -8,6 +8,15 @@
     <li class="list-group-item">Display the result on the page via string interpolation</li>
   </ul>
   <div class="container your-code">
-    <h6>Remove this &lt;h3&gt; and create your HTML here</h6>
+    <div class="alert alert-info" *ngIf = " textData && textData.length > 0; else notextData">
+     {{ textData }}
+    </div>
+    <input type="text"   #elem  class="form-control"  
+      placeholder="Enter Text Data"
+     (input)="onTextInputTap(elem.value)"
+   >
   </div>
 </div>
+<ng-template #notextData>
+  <div class="alert alert-info"> No Text as input !!</div>
+</ng-template>

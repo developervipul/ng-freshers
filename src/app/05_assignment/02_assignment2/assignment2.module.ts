@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Assignment2Component } from './containers/assignment2.component';
 
 @NgModule({
@@ -7,6 +8,9 @@ import { Assignment2Component } from './containers/assignment2.component';
   ],
   exports: [
     Assignment2Component
+  ],
+  imports: [
+    CommonModule
   ]
 })
 export class Assignment2Module {

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { Todo } from '../../assignment.component';
+
 
 @Component({
   selector: 'app-assignment2',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class Assignment2Component {
 
+  @Input()
+  todos: Todo[]
+  
+  selectedTodo: Todo
+
+  onSelectedTodo(todo: Todo){
+    this.selectedTodo = todo
+  }
 }
